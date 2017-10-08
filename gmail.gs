@@ -32,9 +32,9 @@ function periodicProcess() {
           try {
             UrlFetchApp.fetch(url);
             threads[i].markRead();
-          } catch(e) {
-          }
+          } catch(e) {}
         }
+        threads[i].reply("Request processed");
       }
     }
   }
